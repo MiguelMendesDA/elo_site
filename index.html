@@ -17,11 +17,12 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="brand.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Elo — início">
-        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 4.48 22 2c-1 7-2.5 13-7.5 16.5A7 7 0 0 1 11 20Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.8 14.46 12 13 13 12"></path></svg></span>
         <span>elo<span class="brand-dot">.</span></span>
       </a>
       <nav class="desktop-nav" aria-label="Navegação principal">
@@ -89,7 +90,7 @@
       <section class="closing-cta section-wrap" aria-labelledby="cta-title"><div><p class="eyebrow"><span></span> O próximo passo pode ser pequeno</p><h2 id="cta-title">Queres saber quando<br /><em>a Elo estiver pronta?</em></h2></div><button class="button button-primary js-interest" type="button">Quero saber mais <span aria-hidden="true">↗</span></button></section>
     </main>
 
-    <footer class="site-footer"><div class="section-wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✳</span><span>elo<span class="brand-dot">.</span></span></a><p>Conhecimento para cuidar.</p><small>© <span id="year"></span> Elo. Feito com cuidado.</small></div></footer>
+    <footer class="site-footer"><div class="section-wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 4.48 22 2c-1 7-2.5 13-7.5 16.5A7 7 0 0 1 11 20Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.8 14.46 12 13 13 12"></path></svg></span><span>elo<span class="brand-dot">.</span></span></a><p>Conhecimento para cuidar.</p><small>© <span id="year"></span> Elo. Feito com cuidado.</small></div></footer>
 
     <div class="modal" id="interest-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-panel"><button class="modal-close" type="button" aria-label="Fechar" data-close-modal>×</button><span class="modal-spark">✳</span><p class="eyebrow"><span></span> Fica por perto</p><h2 id="modal-title">Queres saber mais<br /><em>sobre a Elo?</em></h2><p>Abre o teu email com uma mensagem já preparada. Respondemos assim que tivermos novidades sobre o acesso.</p><a class="button button-primary modal-mail" href="mailto:ola@elo.pt?subject=Quero%20saber%20mais%20sobre%20a%20Elo&body=Olá%2C%20quero%20saber%20mais%20sobre%20a%20Elo.%0A%0ENome%3A%20">Enviar interesse <span aria-hidden="true">↗</span></a><small>O email de contacto pode ser alterado em <code>script.js</code>.</small></div>
