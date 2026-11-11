@@ -1,0 +1,51 @@
+@media (max-width: 600px) {
+  body { overflow-x: hidden; }
+  .site-header { padding-left: 16px; padding-right: 16px; gap: 12px; }
+  .site-header .brand { font-size: 28px; letter-spacing: -1.5px; }
+  .site-header .brand-mark { width: 29px; height: 29px; border-radius: 9px; font-size: 18px; }
+  .site-header .button-small { white-space: nowrap; padding: 10px 11px; font-size: 10px; gap: 8px; }
+  .section-wrap { padding-left: 18px; padding-right: 18px; }
+  .hero { padding-top: 40px; padding-bottom: 50px; gap: 24px; }
+  .hero h1 { font-size: clamp(37px, 11vw, 48px); line-height: 1.08; letter-spacing: -2.5px; }
+  .hero-intro { font-size: 15px; line-height: 1.7; color: #6f7b71; }
+  .hero-actions { margin-top: 25px; }
+  .hero-actions .button-primary { width: 100%; }
+  .hero-note { font-size: 10px; line-height: 1.5; }
+  .hero-art { height: 310px; border-radius: 36% 36% 16px 16px; }
+  .trust-grid { grid-template-columns: 1fr; gap: 16px; padding-top: 25px; padding-bottom: 25px; }
+  .trust-grid > p { margin-bottom: 3px; }
+  .trust-grid > div { grid-template-columns: 38px 1fr; align-items: center; }
+  .trust-icon { width: 38px; height: 38px; }
+  .trust-grid strong { font-size: 13px; }
+  .trust-grid small { font-size: 11px; margin-top: 3px; }
+  .content-section { padding-top: 68px; padding-bottom: 72px; }
+  .section-heading { margin-bottom: 30px; }
+  .section-heading h2 { font-size: 34px; letter-spacing: -1.7px; }
+  .section-lead { font-size: 14px; line-height: 1.7; }
+  .feature-grid { gap: 14px; }
+  .feature-card { min-height: 235px; padding: 24px 23px 22px; }
+  .feature-card h3 { font-size: 19px; }
+  .feature-card p { font-size: 13px; line-height: 1.75; }
+  .feature-card a { left: 23px; bottom: 23px; font-size: 12px; }
+  .step { top: 25px; right: 23px; }
+  .audience-layout { padding-top: 67px; padding-bottom: 67px; gap: 40px; }
+  .audience-layout h2 { font-size: 35px; letter-spacing: -1.8px; }
+  .audience-layout > div > p:not(.eyebrow) { font-size: 15px; line-height: 1.75; }
+  .audience-layout .button-light { width: 100%; }
+  .quote-card { padding: 31px 27px; }
+  .quote-card blockquote { font-size: 24px; line-height: 1.32; }
+  .faq-section { padding-top: 68px; padding-bottom: 72px; gap: 29px; }
+  .faq-section .section-heading h2 { font-size: 31px; letter-spacing: -1.5px; }
+  .faq-list details { padding: 21px 0; }
+  .faq-list summary { font-size: 14px; line-height: 1.45; gap: 18px; }
+  .faq-list details p { font-size: 13px; line-height: 1.75; }
+  .closing-cta { padding-top: 63px; padding-bottom: 75px; gap: 29px; }
+  .closing-cta h2 { font-size: 35px; letter-spacing: -1.7px; }
+  .closing-cta .button { width: 100%; }
+  .footer-inner { min-height: 0; padding-top: 31px; padding-bottom: 31px; gap: 15px; }
+  .footer-inner p { font-size: 12px; }
+  .footer-inner small { font-size: 10px; }
+  .modal { padding: 14px; }
+  .modal-panel { padding: 31px 22px; }
+  .modal h2 { font-size: 30px; }
+}
