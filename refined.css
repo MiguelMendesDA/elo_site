@@ -48,6 +48,30 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .price-badge { position: absolute; top: 20px; right: 20px; padding: 5px 8px; border-radius: 20px; background: #dcead4; color: #41633d; font-size: 9px; letter-spacing: .8px; font-weight: 700; }
 .price-card .button { width: 100%; }
 .price-card-featured .button-primary { background: #f4f5ed; color: var(--green); box-shadow: none; }
+.pricing-heading { text-align: center; max-width: 680px; margin: 0 auto 38px; }
+.pricing-heading .eyebrow { justify-content: center; }
+.pricing-heading .section-lead { margin: 18px auto 0; }
+.pricing-grid { max-width: 1000px; margin: auto; gap: 24px; align-items: stretch; }
+.price-card { display: flex; flex-direction: column; padding: 32px; border-radius: 20px; }
+.price-card-featured { background: #edf3e8; color: var(--ink); border: 1px solid #a9bfa0; box-shadow: none; }
+.plan-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.price-card-featured .price-label { color: #41633d; }
+.plan-type { font-size: 12px; color: #42603b; background: #edf3e8; border-radius: 30px; padding: 5px 11px; }
+.price-card-featured .plan-type { background: #dbe8d3; }
+.price-card h3 { margin: 24px 0 12px; font-size: 25px; letter-spacing: -.6px; }
+.price-card p.plan-description { min-height: 0; color: #536356; margin: 0 0 24px; font-size: 16px; }
+.price-block { display: flex; flex-direction: column; gap: 8px; padding: 22px 0; border-top: 1px solid #d6dfd0; border-bottom: 1px solid #d6dfd0; }
+.price-caption { font-size: 12px; color: #536356; }
+.price-card .price-value { display: block; margin: 0; font: 600 34px/1.2 'Manrope', sans-serif; letter-spacing: -1px; color: #284e3c; }
+.price-detail { font-size: 13px; color: #536356; }
+.plan-features { list-style: none; padding: 0; margin: 24px 0 28px; font-size: 15px; color: #3f5546; }
+.plan-features li { display: flex; gap: 11px; margin: 10px 0; }
+.plan-features li::before { content: '✓'; color: #42683b; font-weight: 700; flex-shrink: 0; }
+.price-card .button { margin-top: auto; gap: 12px; padding: 14px 16px; font-size: 14px; line-height: 1.5; }
+.price-card-featured .button-primary { background: var(--green); color: #fff; }
+.price-card-featured .button-primary:hover { background: #194a39; }
+.pricing-note { margin: 28px auto 0; text-align: center; font-size: 14px; color: #536356; }
+.pricing-help { display: inline; padding: 8px 4px; background: transparent; color: #255a48; text-decoration: underline; text-underline-offset: 4px; }
 .faq-list summary { font-size: 16px; min-height: 44px; }
 .faq-list details p { font-size: 16px; color: #536356; }
 .closing-cta { padding-top: 55px; padding-bottom: 65px; }
@@ -83,6 +107,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .price-card h3 { font-size: 20px; }
   .price-card p { min-height: 0; font-size: 15px; }
   .price-value { margin: 22px 0 20px; }
+  .pricing-heading { text-align: left; margin-bottom: 28px; }
+  .pricing-heading .eyebrow { justify-content: flex-start; }
+  .pricing-heading .section-lead { margin-left: 0; }
+  .pricing-grid { gap: 20px; }
+  .price-card { padding: 24px 22px; border-radius: 16px; }
+  .price-card h3 { font-size: 23px; }
+  .price-card .price-value { font-size: 30px; }
+  .pricing-note { text-align: left; }
   .quote-card { padding: 0 0 0 22px; }
   .quote-card blockquote { font-size: 22px; margin-top: 0; }
   .closing-cta { padding-top: 42px; padding-bottom: 48px; }
