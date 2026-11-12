@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f5ee" />
-    <meta name="description" content="Elo — conhecimento para cuidar. Uma plataforma de apoio para viver a gravidez, o parto e os primeiros meses com mais confiança." />
+    <meta name="description" content="Elo · Além do parto. Uma plataforma de apoio para viver a gravidez, o parto e os primeiros meses com mais confiança." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Elo · Conhecimento para cuidar" />
+    <meta property="og:title" content="Elo · Além do parto" />
     <meta property="og:description" content="Conteúdos claros e apoio próximo para cada momento da parentalidade." />
-    <meta property="og:url" content="https://elo.pt/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>Elo · Conhecimento para cuidar</title>
+    <meta property="og:url" content="https://miguelmendesda.github.io/elo_site/" />
+    <meta name="twitter:card" content="summary" />
+    <title>Elo · Além do parto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -18,12 +18,13 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile.css" />
     <link rel="stylesheet" href="brand.css" />
+    <link rel="stylesheet" href="refined.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Elo — início">
         <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 4.48 22 2c-1 7-2.5 13-7.5 16.5A7 7 0 0 1 11 20Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.8 14.46 12 13 13 12"></path></svg></span>
-        <span>elo<span class="brand-dot">.</span></span>
+        <span>elo<span class="brand-dot">.</span><small class="brand-name">Além do parto</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="#como-funciona">Como funciona</a>
@@ -36,9 +37,9 @@
     <main id="top">
       <section class="hero section-wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Uma plataforma para esta fase da vida</p>
-          <h1 id="hero-title">Cuidar começa por <em>sentir confiança.</em></h1>
-          <p class="hero-intro">A Elo junta conhecimento claro, orientação prática e um espaço para voltares sempre que precisares — antes, durante e depois do parto.</p>
+          <p class="eyebrow"><span></span> Elo · Além do parto</p>
+          <h1 id="hero-title">O parto é um começo.<br /><em>Estamos contigo no que vem depois.</em></h1>
+          <p class="hero-intro">Da gravidez aos primeiros meses com o bebé. Na Elo, encontras conteúdos e ferramentas de apoio para viver cada etapa com mais confiança.</p>
           <div class="hero-actions">
             <button class="button button-primary js-interest" type="button">Quero saber mais <span aria-hidden="true">↗</span></button>
             <a class="text-link" href="#como-funciona">Descobrir a Elo <span aria-hidden="true">↓</span></a>
@@ -53,28 +54,21 @@
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="O que encontras na Elo">
-        <div class="section-wrap trust-grid">
-          <p>Feito para acompanhar<br /><strong>o teu ritmo.</strong></p>
-          <div><span class="trust-icon sage">⌁</span><strong>Conteúdo claro</strong><small>Sem ruído, sem culpa.</small></div>
-          <div><span class="trust-icon peach">♧</span><strong>Orientação prática</strong><small>Para decisões reais.</small></div>
-          <div><span class="trust-icon lavender">♡</span><strong>Espaço seguro</strong><small>Ao teu lado, sempre.</small></div>
-        </div>
-      </section>
+      <div class="journey section-wrap" aria-label="Temas da plataforma"><span>Gravidez</span><span>Parto</span><span>Pós-parto</span><span>Bebé</span><span>Amamentação</span></div>
 
       <section class="section-wrap content-section" id="como-funciona" aria-labelledby="how-title">
         <div class="section-heading"><p class="eyebrow"><span></span> Como funciona</p><h2 id="how-title">Menos pesquisa.<br /><em>Mais presença.</em></h2><p class="section-lead">A informação certa, no momento certo, com a simplicidade de uma conversa boa.</p></div>
         <div class="feature-grid">
-          <article class="feature-card feature-highlight"><span class="step">01</span><div class="feature-icon icon-leaf">⌁</div><h3>Aprende ao teu ritmo</h3><p>Guias curtos, artigos e materiais de apoio para consultar quando fizer sentido para ti.</p><a href="#perguntas">Saber mais <span>↗</span></a></article>
-          <article class="feature-card"><span class="step">02</span><div class="feature-icon icon-sun" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 4.48 22 2c-1 7-2.5 13-7.5 16.5A7 7 0 0 1 11 20Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.8 14.46 12 13 13 12"></path></svg></div><h3>Encontra orientação</h3><p>Temas organizados para não te perderes no excesso de informação da internet.</p><a href="#perguntas">Saber mais <span>↗</span></a></article>
-          <article class="feature-card"><span class="step">03</span><div class="feature-icon icon-heart">♡</div><h3>Leva contigo</h3><p>Um espaço pessoal para rever, guardar e voltar a tudo o que te ajuda.</p><a href="#perguntas">Saber mais <span>↗</span></a></article>
+          <article class="feature-card feature-highlight"><span class="step">01</span><div class="feature-icon icon-leaf">⌁</div><h3>Aprende ao teu ritmo</h3><p>Guias curtos, artigos e materiais de apoio para consultar quando fizer sentido para ti.</p></article>
+          <article class="feature-card"><span class="step">02</span><div class="feature-icon icon-sun" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 4.48 22 2c-1 7-2.5 13-7.5 16.5A7 7 0 0 1 11 20Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.8 14.46 12 13 13 12"></path></svg></div><h3>Encontra orientação</h3><p>Temas organizados para não te perderes no excesso de informação da internet.</p></article>
+          <article class="feature-card"><span class="step">03</span><div class="feature-icon icon-heart">♡</div><h3>Leva contigo</h3><p>Um espaço pessoal para rever, guardar e voltar a tudo o que te ajuda.</p></article>
         </div>
       </section>
 
       <section class="audience-section" id="para-quem" aria-labelledby="audience-title">
         <div class="section-wrap audience-layout">
           <div><p class="eyebrow"><span></span> Para quem é a Elo</p><h2 id="audience-title">Para quem está a<br /><em>preparar o caminho.</em></h2><p>Para grávidas, parceiros, famílias e pessoas que acompanham. Porque cuidar também é ter com quem contar.</p><button class="button button-light js-interest" type="button">Quero fazer parte <span aria-hidden="true">↗</span></button></div>
-          <div class="quote-card"><span class="quote-mark">“</span><blockquote>Não precisas de saber tudo de uma vez. Só precisas de encontrar o próximo passo.</blockquote><span class="quote-line"></span><small>Elo · conhecimento para cuidar</small></div>
+          <div class="quote-card"><span class="quote-mark">“</span><blockquote>Não precisas de saber tudo de uma vez. Só precisas de encontrar o próximo passo.</blockquote><span class="quote-line"></span><small>Elo · Além do parto</small></div>
         </div>
       </section>
 
@@ -90,10 +84,10 @@
       <section class="closing-cta section-wrap" aria-labelledby="cta-title"><div><p class="eyebrow"><span></span> O próximo passo pode ser pequeno</p><h2 id="cta-title">Queres saber quando<br /><em>a Elo estiver pronta?</em></h2></div><button class="button button-primary js-interest" type="button">Quero saber mais <span aria-hidden="true">↗</span></button></section>
     </main>
 
-    <footer class="site-footer"><div class="section-wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 4.48 22 2c-1 7-2.5 13-7.5 16.5A7 7 0 0 1 11 20Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.8 14.46 12 13 13 12"></path></svg></span><span>elo<span class="brand-dot">.</span></span></a><p>Conhecimento para cuidar.</p><small>© <span id="year"></span> Elo. Feito com cuidado.</small></div></footer>
+    <footer class="site-footer"><div class="section-wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 4.48 22 2c-1 7-2.5 13-7.5 16.5A7 7 0 0 1 11 20Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.8 14.46 12 13 13 12"></path></svg></span><span>elo<span class="brand-dot">.</span></span></a><p>Além do parto. Conhecimento para cuidar.</p><small>© <span id="year"></span> Elo. Feito com cuidado.</small></div></footer>
 
     <div class="modal" id="interest-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-panel"><button class="modal-close" type="button" aria-label="Fechar" data-close-modal>×</button><span class="modal-spark">✳</span><p class="eyebrow"><span></span> Fica por perto</p><h2 id="modal-title">Queres saber mais<br /><em>sobre a Elo?</em></h2><p>Abre o teu email com uma mensagem já preparada. Respondemos assim que tivermos novidades sobre o acesso.</p><a class="button button-primary modal-mail" href="mailto:ola@elo.pt?subject=Quero%20saber%20mais%20sobre%20a%20Elo&body=Olá%2C%20quero%20saber%20mais%20sobre%20a%20Elo.%0A%0ENome%3A%20">Enviar interesse <span aria-hidden="true">↗</span></a><small>O email de contacto pode ser alterado em <code>script.js</code>.</small></div>
+      <div class="modal-panel"><button class="modal-close" type="button" aria-label="Fechar" data-close-modal>×</button><p class="eyebrow"><span></span> Fica por perto</p><h2 id="modal-title">Queres saber mais<br /><em>sobre a Elo?</em></h2><p>Abre o teu email com uma mensagem já preparada. Respondemos assim que tivermos novidades sobre o acesso.</p><a class="button button-primary modal-mail" href="mailto:ola@elo.pt?subject=Quero%20saber%20mais%20sobre%20a%20Elo&body=Olá%2C%20quero%20saber%20mais%20sobre%20a%20Elo.%0A%0ANome%3A%20">Enviar interesse <span aria-hidden="true">↗</span></a><small>O teu programa de email vai abrir. Revê a mensagem e carrega em enviar.</small></div>
     </div>
     <script src="script.js"></script>
   </body>

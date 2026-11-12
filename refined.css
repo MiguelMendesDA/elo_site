@@ -1,0 +1,70 @@
+/* A quieter hierarchy with comfortable reading and touch targets. */
+:root { --ink: #243d32; --paper: #faf9f5; }
+body { line-height: 1.6; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #8a6845; outline-offset: 5px; }
+.brand-name { display: block; font: 500 12px/1.4 'DM Sans', sans-serif; letter-spacing: .2px; margin-top: 6px; color: #526653; }
+.site-header { height: 100px; }
+.desktop-nav { color: #526653; font-size: 14px; }
+.button { min-height: 48px; font-size: 15px; padding: 13px 22px; border-radius: 10px; }
+.hero { gap: 60px; padding-top: 25px; padding-bottom: 55px; }
+.hero h1 { font-size: clamp(38px, 4.2vw, 58px); line-height: 1.16; letter-spacing: -2px; }
+.hero h1 em { color: #5e7951; }
+.hero-intro { font-size: 17px; color: #536356; line-height: 1.75; }
+.eyebrow { color: #536b4b; font-size: 11px; letter-spacing: 1.3px; }
+.text-link { font-size: 14px; color: #395b44; padding: 12px 0; }
+.hero-note { color: #657062; font-size: 12px; }
+.hero-art { height: 390px; transform: none; box-shadow: none; border-radius: 180px 180px 20px 20px; }
+.art-card { transform: none; }
+.journey { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; padding-top: 23px; padding-bottom: 23px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: #536653; font-size: 14px; }
+.section-heading { display: block; max-width: 660px; margin-bottom: 35px; }
+.section-heading h2 { font-size: 39px; letter-spacing: -1.4px; }
+.section-lead { max-width: 530px; font-size: 16px; color: #536356; margin-top: 20px; }
+.content-section { padding-top: 80px; padding-bottom: 80px; }
+.feature-card, .feature-card.feature-highlight { min-height: 0; background: transparent; border: 0; border-top: 1px solid #cbd6c5; border-radius: 0; padding: 28px 12px 0 0; }
+.feature-icon { display: none; }
+.step { position: static; display: block; color: #56734c; margin-bottom: 22px; font-size: 13px; }
+.feature-card h3 { font-size: 21px; }
+.feature-card p { font-size: 16px; max-width: none; color: #536356; line-height: 1.7; }
+.audience-layout { gap: 60px; padding-top: 65px; padding-bottom: 65px; }
+.audience-layout h2 em { color: #c3d7b6; }
+.audience-layout > div > p:not(.eyebrow) { font-size: 16px; color: #e1eadc; }
+.quote-card { transform: none; background: none; border: 0; border-left: 1px solid #75957d; border-radius: 0; padding: 15px 0 15px 35px; }
+.quote-mark { display: none; }
+.quote-card blockquote { font-size: 26px; }
+.quote-card small { font-size: 12px; color: #d4e1cd; }
+.faq-section { padding-top: 80px; padding-bottom: 70px; gap: 45px; }
+.faq-list summary { font-size: 16px; min-height: 44px; }
+.faq-list details p { font-size: 16px; color: #536356; }
+.closing-cta { padding-top: 55px; padding-bottom: 65px; }
+.closing-cta h2 { font-size: 36px; }
+.footer-inner p, .footer-inner small { color: #536356; font-size: 13px; }
+.modal { overflow-y: auto; }
+.modal-panel { max-height: calc(100dvh - 32px); overflow-y: auto; }
+.modal-panel > p:not(.eyebrow) { color: #536356; font-size: 16px; }
+.modal-panel > small { color: #536356; font-size: 12px; }
+.modal-close { width: 44px; height: 44px; top: 5px; right: 5px; }
+@media (max-width: 800px) {
+  .hero { gap: 28px; }
+  .hero-art { display: none; }
+  .hero-copy { max-width: 620px; }
+  .site-header { height: 90px; }
+  .site-header .button-small { font-size: 13px; min-height: 44px; padding: 10px 13px; }
+  .hero { padding-top: 28px; padding-bottom: 32px; }
+  .hero h1 { font-size: clamp(34px, 8.8vw, 48px); letter-spacing: -1.5px; line-height: 1.18; }
+  .hero-intro { font-size: 16px; margin: 22px 0; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 8px; }
+  .hero-actions .text-link { text-align: center; }
+  .hero-note { margin-top: 15px; font-size: 12px; }
+  .journey { justify-content: flex-start; gap: 8px 20px; font-size: 13px; }
+  .content-section, .faq-section { padding-top: 50px; padding-bottom: 50px; }
+  .section-heading h2, .faq-section .section-heading h2, .audience-layout h2, .closing-cta h2 { font-size: 30px; line-height: 1.22; letter-spacing: -1px; }
+  .feature-grid { gap: 26px; }
+  .feature-card { padding-top: 20px; }
+  .step { margin-bottom: 8px; }
+  .audience-layout { padding-top: 45px; padding-bottom: 45px; gap: 35px; }
+  .quote-card { padding: 0 0 0 22px; }
+  .quote-card blockquote { font-size: 22px; margin-top: 0; }
+  .closing-cta { padding-top: 42px; padding-bottom: 48px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-inner p { order: initial; margin: 0; }
+}
