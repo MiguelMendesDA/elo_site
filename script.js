@@ -70,10 +70,10 @@ if (carousel) {
 
   const showSlide = (next, { focus = false } = {}) => {
     currentSlide = (next + slides.length) % slides.length;
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
     slides.forEach((slide, index) => {
       const active = index === currentSlide;
       slide.classList.toggle('is-active', active);
+      slide.hidden = !active;
       slide.setAttribute('aria-hidden', String(!active));
     });
     dots.forEach((dot, index) => {
