@@ -1,6 +1,6 @@
 // Configuração de marketing: este site não precisa de backend.
 // Altera este email para a caixa que irá receber os pedidos de interesse.
-const INTEREST_EMAIL = 'ola@elo.pt';
+const INTEREST_EMAIL = 'geral@alen2.app';
 
 const modal = document.querySelector('#interest-modal');
 const interestButtons = document.querySelectorAll('.js-interest');
@@ -23,6 +23,7 @@ function openModal(event) {
   updateMailLink(plan);
   document.querySelector('#modal-title').textContent = plan ? 'Saber mais: ' + plan : 'Queres saber mais sobre a alen2?';
   modal.classList.add('is-open');
+  modal.inert = false;
   modal.setAttribute('aria-hidden', 'false');
   closeButton.focus();
   document.body.style.overflow = 'hidden';
@@ -30,6 +31,7 @@ function openModal(event) {
 
 function closeModal() {
   modal.classList.remove('is-open');
+  modal.inert = true;
   modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
   modalTrigger?.focus();
