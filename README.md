@@ -1,13 +1,13 @@
-# Elo · Site de apresentação
+# alen2 · alento — Site de apresentação
 
-Landing page estática para divulgação da Elo e recolha de manifestações de interesse.
+Landing page estática para divulgação da alen2 · alento e recolha de manifestações de interesse.
 
 ## Conteúdo
 
 - `index.html` — estrutura, copy em português de Portugal e metadados para redes sociais.
 - `styles.css` — identidade visual, responsividade e acessibilidade básica.
 - `script.js` — modal do botão “Quero saber mais”, sem backend; abre um email pré-preenchido.
-- `favicon.svg` — ícone da Elo.
+- `favicon.svg` — ícone da alen2.
 
 ## Personalização rápida
 

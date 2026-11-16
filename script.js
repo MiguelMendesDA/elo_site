@@ -10,10 +10,10 @@ const year = document.querySelector('#year');
 let modalTrigger = null;
 
 function updateMailLink(plan = '') {
-  const subject = encodeURIComponent(plan ? 'Elo — ' + plan : 'Quero saber mais sobre a Elo');
+  const subject = encodeURIComponent(plan ? 'alen2 — ' + plan : 'Quero saber mais sobre a alen2');
   const body = encodeURIComponent(plan
-    ? 'Olá, gostaria de receber informações sobre a opção ' + plan + ' da Elo, incluindo preço, duração e o que está incluído.\n\nNome: '
-    : 'Olá, quero saber mais sobre a Elo.\n\nNome: ');
+    ? 'Olá, gostaria de receber informações sobre a opção ' + plan + ' da alen2, incluindo preço, duração e o que está incluído.\n\nNome: '
+    : 'Olá, quero saber mais sobre a alen2.\n\nNome: ');
   mailLink.href = `mailto:${INTEREST_EMAIL}?subject=${subject}&body=${body}`;
 }
 
@@ -21,7 +21,7 @@ function openModal(event) {
   modalTrigger = event.currentTarget;
   const plan = modalTrigger.dataset.plan || '';
   updateMailLink(plan);
-  document.querySelector('#modal-title').textContent = plan ? 'Saber mais: ' + plan : 'Queres saber mais sobre a Elo?';
+  document.querySelector('#modal-title').textContent = plan ? 'Saber mais: ' + plan : 'Queres saber mais sobre a alen2?';
   modal.classList.add('is-open');
   modal.setAttribute('aria-hidden', 'false');
   closeButton.focus();
