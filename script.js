@@ -60,13 +60,11 @@ year.textContent = new Date().getFullYear();
 
 const carousel = document.querySelector('[data-carousel]');
 if (carousel) {
-  const track = carousel.querySelector('.tour-track');
   const slides = [...carousel.querySelectorAll('[data-slide]')];
   const dots = [...carousel.querySelectorAll('[data-carousel-dot]')];
   const status = carousel.querySelector('.tour-status');
   let currentSlide = 0;
   let carouselTimer;
-  let carouselPaused = false;
 
   const showSlide = (next, { focus = false } = {}) => {
     currentSlide = (next + slides.length) % slides.length;
@@ -88,7 +86,7 @@ if (carousel) {
   const nextSlide = () => showSlide(currentSlide + 1);
   const startCarousel = () => {
     clearInterval(carouselTimer);
-    if (!carouselPaused && !document.hidden) {
+    if (!document.hidden) {
       carouselTimer = setInterval(nextSlide, 5000);
     }
   };
@@ -98,18 +96,6 @@ if (carousel) {
   dots.forEach((dot, index) => dot.addEventListener('click', () => { showSlide(index, { focus: true }); startCarousel(); }));
   // Touch devices can retain hover and focus after a tap; neither should stop autoplay.
   document.addEventListener('visibilitychange', startCarousel);
-  const pauseButton = document.createElement('button');
-  pauseButton.type = 'button';
-  pauseButton.className = 'tour-arrow';
-  pauseButton.textContent = 'Ⅱ';
-  pauseButton.setAttribute('aria-label', 'Pausar apresentação');
-  pauseButton.addEventListener('click', () => {
-    carouselPaused = !carouselPaused;
-    pauseButton.textContent = carouselPaused ? '▶' : 'Ⅱ';
-    pauseButton.setAttribute('aria-label', carouselPaused ? 'Retomar apresentação' : 'Pausar apresentação');
-    startCarousel();
-  });
-  carousel.querySelector('.tour-controls').append(pauseButton);
   carousel.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') { event.preventDefault(); showSlide(currentSlide + 1, { focus: true }); startCarousel(); }
     if (event.key === 'ArrowLeft') { event.preventDefault(); showSlide(currentSlide - 1, { focus: true }); startCarousel(); }
