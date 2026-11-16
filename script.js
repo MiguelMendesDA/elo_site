@@ -88,7 +88,7 @@ if (carousel) {
   const nextSlide = () => showSlide(currentSlide + 1);
   const startCarousel = () => {
     clearInterval(carouselTimer);
-    if (!carouselPaused && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (!carouselPaused && !document.hidden) {
       carouselTimer = setInterval(nextSlide, 5000);
     }
   };
@@ -96,10 +96,20 @@ if (carousel) {
   carousel.querySelector('[data-carousel-next]')?.addEventListener('click', () => { showSlide(currentSlide + 1, { focus: true }); startCarousel(); });
   carousel.querySelector('[data-carousel-prev]')?.addEventListener('click', () => { showSlide(currentSlide - 1, { focus: true }); startCarousel(); });
   dots.forEach((dot, index) => dot.addEventListener('click', () => { showSlide(index, { focus: true }); startCarousel(); }));
-  carousel.addEventListener('mouseenter', () => { carouselPaused = true; clearInterval(carouselTimer); });
-  carousel.addEventListener('mouseleave', () => { carouselPaused = false; startCarousel(); });
-  carousel.addEventListener('focusin', () => { carouselPaused = true; clearInterval(carouselTimer); });
-  carousel.addEventListener('focusout', (event) => { if (!carousel.contains(event.relatedTarget)) { carouselPaused = false; startCarousel(); } });
+  // Touch devices can retain hover and focus after a tap; neither should stop autoplay.
+  document.addEventListener('visibilitychange', startCarousel);
+  const pauseButton = document.createElement('button');
+  pauseButton.type = 'button';
+  pauseButton.className = 'tour-arrow';
+  pauseButton.textContent = 'Ⅱ';
+  pauseButton.setAttribute('aria-label', 'Pausar apresentação');
+  pauseButton.addEventListener('click', () => {
+    carouselPaused = !carouselPaused;
+    pauseButton.textContent = carouselPaused ? '▶' : 'Ⅱ';
+    pauseButton.setAttribute('aria-label', carouselPaused ? 'Retomar apresentação' : 'Pausar apresentação');
+    startCarousel();
+  });
+  carousel.querySelector('.tour-controls').append(pauseButton);
   carousel.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') { event.preventDefault(); showSlide(currentSlide + 1, { focus: true }); startCarousel(); }
     if (event.key === 'ArrowLeft') { event.preventDefault(); showSlide(currentSlide - 1, { focus: true }); startCarousel(); }
