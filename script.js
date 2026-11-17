@@ -1,31 +1,26 @@
-// Configuração de marketing: este site não precisa de backend.
-// Altera este email para a caixa que irá receber os pedidos de interesse.
-const INTEREST_EMAIL = 'geral@alen2.app';
+const INTEREST_API = 'https://elo-gxp4.onrender.com/api/marketing-interest';
 
 const modal = document.querySelector('#interest-modal');
 const interestButtons = document.querySelectorAll('.js-interest');
 const closeButton = document.querySelector('[data-close-modal]');
-const mailLink = document.querySelector('.modal-mail');
+const interestForm = document.querySelector('#interest-form');
+const interestName = document.querySelector('#interest-name');
+const interestEmail = document.querySelector('#interest-email');
+const interestStatus = document.querySelector('#interest-status');
 const year = document.querySelector('#year');
 let modalTrigger = null;
-
-function updateMailLink(plan = '') {
-  const subject = encodeURIComponent(plan ? 'alen2 — ' + plan : 'Quero saber mais sobre a alen2');
-  const body = encodeURIComponent(plan
-    ? 'Olá, gostaria de receber informações sobre a opção ' + plan + ' da alen2, incluindo preço, duração e o que está incluído.\n\nNome: '
-    : 'Olá, quero saber mais sobre a alen2.\n\nNome: ');
-  mailLink.href = `mailto:${INTEREST_EMAIL}?subject=${subject}&body=${body}`;
-}
+let selectedPlan = '';
 
 function openModal(event) {
   modalTrigger = event.currentTarget;
-  const plan = modalTrigger.dataset.plan || '';
-  updateMailLink(plan);
-  document.querySelector('#modal-title').textContent = plan ? 'Saber mais: ' + plan : 'Queres saber mais sobre a alen2?';
+  selectedPlan = modalTrigger.dataset.plan || '';
+  document.querySelector('#modal-title').innerHTML = selectedPlan ? `Saber mais<br /><em>${selectedPlan}</em>` : 'Queres saber mais<br /><em>sobre a alen2?</em>';
+  interestStatus.textContent = '';
+  interestForm.reset();
   modal.classList.add('is-open');
   modal.inert = false;
   modal.setAttribute('aria-hidden', 'false');
-  closeButton.focus();
+  interestName.focus();
   document.body.style.overflow = 'hidden';
 }
 
@@ -38,6 +33,24 @@ function closeModal() {
 }
 
 interestButtons.forEach((button) => button.addEventListener('click', openModal));
+interestForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const submit = interestForm.querySelector('button[type="submit"]');
+  submit.disabled = true;
+  interestStatus.className = 'interest-status';
+  interestStatus.textContent = 'A enviar pedido…';
+  try {
+    const response = await fetch(INTEREST_API, { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ name: interestName.value.trim(), email: interestEmail.value.trim(), plan: selectedPlan }) });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || 'Não foi possível enviar o pedido.');
+    interestStatus.classList.add('is-success');
+    interestStatus.textContent = result.message;
+    interestForm.reset();
+  } catch (error) {
+    interestStatus.classList.add('is-error');
+    interestStatus.textContent = error.message;
+  } finally { submit.disabled = false; }
+});
 closeButton.addEventListener('click', closeModal);
 modal.addEventListener('click', (event) => {
   if (event.target === modal) closeModal();
@@ -47,15 +60,14 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Tab' && modal.classList.contains('is-open')) {
     if (event.shiftKey && document.activeElement === closeButton) {
       event.preventDefault();
-      mailLink.focus();
-    } else if (!event.shiftKey && document.activeElement === mailLink) {
+      interestEmail.focus();
+    } else if (!event.shiftKey && document.activeElement === interestEmail) {
       event.preventDefault();
       closeButton.focus();
     }
   }
 });
 
-updateMailLink();
 year.textContent = new Date().getFullYear();
 
 const carousel = document.querySelector('[data-carousel]');
